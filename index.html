@@ -5,18 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carolina Oliveira</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kalam&family=Noto+Sans+JP:wght@300;400&family=Noto+Sans+TC:wght@300;400&family=Satisfy&family=Walter+Turncoat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/797f0778c7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-  <nav class="menu">
-    <ul>
-      <li><a href="#">Sobre</a></li>
-      <li><a href="#">Portfólio</a></li>
-      <li><a href="#">Contato</a></li>
-    </ul>
-  </nav>
-  <h1 class="site-title">Carolina Oliveira</h1>
-  <h2 class="site-subtitle">Web Developer</h2>
-</header>
+    <header>
+        <nav class="menu">
+          <ul class="container">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+        <div class="titulo">
+          <h1 class="site-title">Carolina Oliveira</h1>
+          <h2 class="site-subtitle">Jr Web Developer</h2>  
+        </div>
+    </header>
+    <section class="sobre container" id="sobre">
+        <h2>Sobre</h2>
+        <figure class="avatar">
+            <img src="image/perfil_img.jpg" alt="Carolina Oliveira">
+        </figure>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, porro odio rerum consectetur nobis quos minus cumque autem. Corrupti deleniti dolorum nulla ipsa id quam possimus quibusdam eveniet, nostrum reiciendis!
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. A maiores id, maxime commodi esse nesciunt aliquam omnis rem nulla corrupti odio ea rerum inventore saepe natus vel non expedita? Unde.
+        </p>
+        <p>
+            Este site foi construído durante a
+            <a href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura</a>
+            😻
+        </p>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h2>Portfólio</h2>
+        <div class="grid">
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="image/alura.png.jpg" alt="Alura">
+                    </figure>
+                    <div class="card-back">
+                        <h3>Alura</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="image/caelum.png" alt="Caelum">
+                    </figure>
+                    <div class="card-back">
+                        <h3>Caelum</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="image/hipsters.png" alt="Hipsters.Tech">
+                    </figure>
+                    <div class="card-back">
+                        <h3>Hipsters Tech</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="image/likeaboss.png" alt="Like a Boss">
+                    </figure>
+                    <div class="card-back">
+                        <h3>Like a Boss</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="image/hobby.png" alt="Handstand">
+                    </figure>
+                    <div class="card-back">
+                        <h3>Handstand</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contato container" id="contato">
+        <h2>Contato</h2>
+        <div class="grid icons">
+            <a target="_blank" href="https://github.com/carololiveira6">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://gitlab.com/carololiveira6">
+                <i class="fab fa-gitlab"></i>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/carololiveira6/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:carolinasao6@gmail.com">
+                <i class="fas fa-at"></i>
+            </a>
+            <a target="_blank" href="https://instagram.com/carolinasao6">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </section>
 </body>
 </html>

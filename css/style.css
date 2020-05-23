@@ -1,10 +1,62 @@
+/* soft reset do css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url("../image/computer-blue-opacity-background.jpg");
+    background-size: auto 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    font-size: 12px;
+}
+
+/* se a tela iver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+header {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu {
-    background-color: white;   
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.2s, color 0.4s;
+}
+
+.menu a:active,
+.menu a:hover {
+    background-color: rgb(3, 3, 97);
+    color: white;
 }
 
 a {
@@ -25,12 +77,161 @@ a:hover {
     list-style: none;
 }
 
+.titulo {
+    transform: scale(0.3) translateY(50vh);
+    opacity: 0;
+    animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+    0% {
+        transform: scale(0.1) translateY(50vh);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
 .site-subtitle,
 .site-title {
     text-align: center;
     color: whitesmoke;
 }
 
-.site-subtitle {
-    font-style: italic;
+.site-title{
+    font-size: 4em;
+    font-family: 'Satisfy', cursive;
 }
+.site-subtitle {
+    font-style: normal;
+    font-family: 'Kalam', cursive;
+}
+
+.sobre,
+.contato,
+.portfolio  {
+    padding: 2em;
+    min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.sobre h2,
+.contato h2,
+.portfolio h2 {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: whitesmoke;
+    margin-bottom: 0.7em;
+    font-size: 2em;
+}
+
+.sobre p {
+    color: white;
+    margin-bottom: 0.8em;
+    text-indent: 1.5em;
+    text-align: justify;
+}
+
+.sobre a {
+    color: cyan
+}
+
+.sobre .avatar {
+    float: right;
+    margin-left: 2em;
+}
+
+.sobre .avatar img {
+    border-radius: 15%;
+}
+
+.portfolio .grid {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 240px 240px;
+}
+
+@media (min-width: 560px) {
+    .portfolio .grid {
+        grid-template-columns: 240px 240px;
+    }
+}
+
+@media (min-width: 880px) {
+    .portfolio .grid {
+        grid-template-columns: repeat(3, 260px);
+        align-content: center;
+        height: calc(100vh - 4em - 48px - 0.7em);
+        justify-content: center;
+    }
+}
+
+.portfolio figure {
+    text-align: center;
+}
+
+.img-portfolio {
+    height: 180px;
+    width: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5%;
+    transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+    transform: scale(1.2);
+}
+
+.flip-card {
+    perspective: 500px;
+}
+
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.flip-card:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card-front, 
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    height: 180px;
+    width: 100px;
+    transform: rotateY(180deg);
+}
+
+.contato .icons {
+    text-align: center;
+}
+
+.contato a {
+    color: whitesmoke;
+    font-size: 2em;
+    transition: text-shadow 0.3s;
+}
+
+.contato a:active,
+.contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 1px 5px whitesmoke;
+}
+
